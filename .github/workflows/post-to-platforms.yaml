@@ -28,8 +28,8 @@ jobs:
           HASHNODE_API_KEY: ${{ secrets.HASHNODE_API_KEY }}
           HASHNODE_PUBLICATION_ID: ${{ secrets.HASHNODE_PUBLICATION_ID }}
           DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
-          MEDIUM_API_KEY: ${{ secrets.MEDIUM_API_KEY }}
-          MEDIUM_AUTHOR_ID: ${{ secrets.MEDIUM_AUTHOR_ID }}
+          # MEDIUM_API_KEY: ${{ secrets.MEDIUM_API_KEY }}
+          # MEDIUM_AUTHOR_ID: ${{ secrets.MEDIUM_AUTHOR_ID }}
         run: |
           echo "Debug: Entering Process new files step"
           echo "New files detected: ${{ steps.new-files.outputs.new_files }}"

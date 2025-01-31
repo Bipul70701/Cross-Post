@@ -1,7 +1,7 @@
 import { promises as fs } from "fs";
 import postToDevTo from "./devto.js";
 import postToHashnode from "./hashnode.js";
-import postToMedium from "./medium.js";
+// import postToMedium from "./medium.js";
 
 const getFrontMatterAndBody = (markdown) => {
   const charactersBetweenGroupedHyphens = /^---([\s\S]*?)---\s*([\s\S]*)/;
@@ -43,7 +43,7 @@ async function postToBlogs(filePath) {
 
   await postToDevTo(frontmatter, body);
   await postToHashnode(frontmatter, body);
-  await postToMedium(frontmatter, body);
+  // await postToMedium(frontmatter, body);
 
   process.stdout.write("Request ended\n"); // Debugging statement
 }
