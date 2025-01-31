@@ -1,0 +1,16 @@
+[
+  {
+    "dates": "July 2024 - Present",
+    "role": "Software Engineer",
+    "company": "Attrove",
+    "description": "Responsible for developing a web app using React, Tailwind CSS, Supabase, and OpenAI, with seamless integration of external APIs for an enhanced user experience.",
+    "logo": "/assets/images/experiences/attrove.ico"
+  },
+  {
+    "dates": "September 2022 - June 2023",
+    "role": "Software Engineer Intern",
+    "company": "Flush",
+    "description": "Responsible for developing modern user interfaces with React and Tailwind",
+    "logo": "/assets/images/experiences/flushb.ico"
+  }
+]
