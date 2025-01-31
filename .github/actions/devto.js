@@ -25,8 +25,15 @@ export default async function postToDevTo(frontMatter, body) {
       redirect: "follow",
     };
 
+    try{
     const response = await fetch("https://dev.to/api/articles", requestOptions);
-    process.stdout.write( response.data+" KEY");
+    process.stdout.write("Successful");
+    }
+    catch (error)
+    {
+      process.stdout.write('Error creating post:', error.response?.data || error.message);
+      throw error;
+    }
     return response;
   } catch (error) {
     process.stderr.write(`Error in postToDevTo: ${error.message}\n`);
