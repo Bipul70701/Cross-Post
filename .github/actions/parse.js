@@ -42,7 +42,7 @@ async function postToBlogs(filePath) {
   process.stdout.write(`Extracted body:\n${body}\n`); // Debugging statement
 
   await postToDevTo(frontmatter, body);
-  await postToHashnode(frontmatter, body);
+  // await postToHashnode(frontmatter, body);
   // await postToMedium(frontmatter, body);
 
   process.stdout.write("Request ended\n"); // Debugging statement
