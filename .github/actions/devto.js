@@ -14,7 +14,7 @@ export default async function postToDevTo(frontMatter, body) {
     // Prepare the request headers
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
-    process.stdout.write( process.env.DEVTO_API_KEY+" KEY");
+    
     myHeaders.append("api-key", process.env.DEVTO_API_KEY);
 
     // Prepare the request options
@@ -26,6 +26,7 @@ export default async function postToDevTo(frontMatter, body) {
     };
 
     const response = await fetch("https://dev.to/api/articles", requestOptions);
+    process.stdout.write( response+" KEY");
     return response;
   } catch (error) {
     process.stderr.write(`Error in postToDevTo: ${error.message}\n`);
