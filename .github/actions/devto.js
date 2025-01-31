@@ -12,29 +12,29 @@ export default async function postToDevTo(frontMatter, body) {
     });
 
     // Prepare the request headers
-    const myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
-    
-    myHeaders.append("api-key", process.env.DEVTO_API_KEY);
+    const headers = new Headers({
+      "Content-Type": "application/json",
+      "api-key": process.env.DEVTO_API_KEY
+    });
 
     // Prepare the request options
     const requestOptions = {
       method: "POST",
-      headers: myHeaders,
+      headers: headers,
       body: postData,
       redirect: "follow",
     };
 
-    try{
+    
     const response = await fetch("https://dev.to/api/articles", requestOptions);
-    process.stdout.write("Successful");
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(`API Error: ${errorData.error || response.statusText}`);
     }
-    catch (error)
-    {
-      process.stdout.write('Error creating post:', error.response?.data || error.message);
-      throw error;
-    }
-    return response;
+    const result = await response.json();
+    console.log('Successfully published to Dev.to:', result.url);
+    return result;
+    //return response;
   } catch (error) {
     process.stderr.write(`Error in postToDevTo: ${error.message}\n`);
   }
