@@ -1,6 +1,9 @@
 export default async function postToDevTo(frontMatter, body) {
   try {
     // Prepare the request body
+    if (!frontMatter?.title || !body) {
+      throw new Error('Missing required title or content');
+    }
     const postData = JSON.stringify({
       article: {
         title: frontMatter.title,
