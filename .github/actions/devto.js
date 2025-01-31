@@ -14,6 +14,7 @@ export default async function postToDevTo(frontMatter, body) {
     // Prepare the request headers
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
+    process.stdout.write( process.env.DEVTO_API_KEY+" KEY");
     myHeaders.append("api-key", process.env.DEVTO_API_KEY);
 
     // Prepare the request options
