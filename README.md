@@ -1,3 +1,3 @@
-# Personal Site
+# Cross-Post 
 
-Check out [this article](http://localhost:4321/post/auto-blogger) on how to set up an auto blogger
+Every new file added at /src/content/ will be posted to dev.to,hashnode and medium
