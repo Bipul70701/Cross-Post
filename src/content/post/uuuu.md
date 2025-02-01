@@ -1,9 +1,7 @@
+![Image description](https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F0evyhmra4sp4kprf74yh.png)
 ---
 title: How to programmatically post your personal blogs to Dev.to, Hashnode, and Medium with Github actions.
 ---
-
-
-## Title
 Welcome to the launch of our exciting new series, *WTF is Artificial Intelligence?*  
 In this 30-day journey, we will delve into the world of Machine Learning, Deep Learning, and Generative AI, breaking down complex concepts into clear, practical explanations. Whether you’re a beginner or just looking for a refresher, this series will guide you step-by-step from zero to hero.
 
@@ -54,7 +52,7 @@ Supervised learning is like learning with a teacher. The machine is trained usin
 Predicting house prices using features like size, bedrooms, and neighborhood.  
 
 *Code Example:*  
-
+```python
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
@@ -74,7 +72,7 @@ model.fit(X_train, y_train)
 
 predictions = model.predict(X_test)
 print("Mean Squared Error:", mean_squared_error(y_test, predictions))
-
+```
 
 ### 2. Unsupervised Learning
 Unsupervised learning works without labeled data. The machine explores the data to find patterns or groupings on its own.
@@ -82,7 +80,7 @@ Unsupervised learning works without labeled data. The machine explores the data 
 Example:
 Grouping customers based on purchase habits.
 
-
+```python
 from sklearn.cluster import KMeans
 import numpy as np
 
@@ -96,7 +94,7 @@ kmeans.fit(data)
 # Output the Cluster Centers and Labels
 print("Cluster Centers:", kmeans.cluster_centers_)
 print("Labels:", kmeans.labels_)
-
+```
 
 ### 3. Reinforcement Learning
 Reinforcement learning is inspired by how humans learn through rewards and punishments. The machine takes actions in an environment and learns from the outcomes.
@@ -105,7 +103,7 @@ Example:
 A robot learning to walk through trial and error.
 
 Code Example (Conceptual):
-
+```python
 import gym
 
 # Create Environment
@@ -123,7 +121,7 @@ while not done:
 
 env.close()
 
-
+```
 ## Why Machine Learning Matters in the Real World
 
 Machine Learning is transforming industries and solving problems in ways we couldn’t imagine a decade ago. Here are a few examples:
